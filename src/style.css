@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--light-pink);
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: left; */
+    gap: 1rem;
+    border: 0;
+}
+button:hover{
+    color: purple;
+}
+.container{
+    background-color:var(--white);
+    border-radius: 30px;
+    max-width: 600px;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+.heading{
+    display: flex;
+    gap: 20px;
+}
+.heading h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.container .acc-item:not(:last-child){
+    border-bottom: 2px solid var(--light-pink);
+}
+.acc-item img{
+    min-width: 30px;
+}
+.icons .minus-button{
+    display: none;
+}
+.acc-desc{
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+.acc-desc p{
+    color: var(--grayish-purple);
+    /* padding: 15px; */
+}
+
+@media (max-width: 540px){
+    body{
+        background-image: url("./assets/images/background-pattern-mobile.svg");
+    }
+}
+/*
+
+.heading{
+    margin-top: 30px;
+    display: flex;
+}
+.heading svg{
+    margin-top: 13px;
+}
+
+.heading h1{
+    font-size: 40px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+.first-question h4, .second-question h4, .third-question h4, .fourth-question h4{
+    padding-bottom: 25px;
+}
+.first-question p, .second-question p, .third-question p, .fourth-question p{
+    padding-bottom: 35px;
+} */
